@@ -1,0 +1,10 @@
+<%= @letters.join(" ") %>
+<form class="form-control" action="/score" data-turbo="false" method="post">
+  <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
+  <%= hidden_field_tag :start_time, Time.now %>
+  <%= hidden_field_tag :letters, @letters.join %>
+  <input type="text" name="word">
+  <input type="submit" value="Ask!">
+</form>
+
+<p>Total score: <%= session[:total_score] || 0 %></p>

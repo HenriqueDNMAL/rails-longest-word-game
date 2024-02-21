@@ -1,0 +1,10 @@
+<h1>Score</h1>
+
+<div class="card-body">
+  <p class="card-text">Your score is: <%= @score %></p>
+  <p class="card-text">Your time was: <%= @time.round(2) %> seconds</p>
+  <p class="card-text">Message: <%= @message %></p>
+</div>
+
+<p>Total score: <%= session[:total_score] || 0 %></p>
+<%= link_to 'Try again', new_path, class: "btn btn-primary" %>
