@@ -1,10 +1,10 @@
-<h1>Score</h1>
+<h1 class="mx-3">Score</h1>
 
-<div class="card-body">
+<div class="card-body m-3">
   <p class="card-text">Your score is: <%= @score %></p>
   <p class="card-text">Your time was: <%= @time.round(2) %> seconds</p>
   <p class="card-text">Message: <%= @message %></p>
 </div>
 
-<p>Total score: <%= session[:total_score] || 0 %></p>
-<%= link_to 'Try again', new_path, class: "btn btn-primary" %>
+<p class="mx-3">Total score: <%= session[:total_score] || 0 %></p>
+<%= link_to 'Try again', new_path, class: "btn btn-primary mx-3" %>

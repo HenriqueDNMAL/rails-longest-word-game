@@ -1,5 +1,5 @@
-<%= @letters.join(" ") %>
-<form class="form-control" action="/score" data-turbo="false" method="post">
+<h1 class="m-3"><%= @letters.join(" ") %></h1>
+<form class="form-control mx-3" action="/score" data-turbo="false" method="post">
   <%= hidden_field_tag :authenticity_token, form_authenticity_token %>
   <%= hidden_field_tag :start_time, Time.now %>
   <%= hidden_field_tag :letters, @letters.join %>
@@ -7,4 +7,4 @@
   <input type="submit" value="Ask!">
 </form>
 
-<p>Total score: <%= session[:total_score] || 0 %></p>
+<p class="m-3">Total score: <%= session[:total_score] || 0 %></p>
